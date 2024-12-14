@@ -1,0 +1,31 @@
+.cv {
+    font-family: "Roboto", sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFA69E;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cv h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.cv h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffdfdf;
+    margin-top: 10px;
+}
+
+.cv p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.6;
+}
