@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="templates/modern.css">
+    <link id="layoutCSS" rel="stylesheet" href="templates/modern.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+    <style>
+        
+        body 
+        {
+            background: linear-gradient(to right, #FFA69E, #FF7E6B);
+            font-family: sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        body.blue 
+        {
+            background: linear-gradient(to right, #3B3355, #191523) !important; 
+        }
+
+        
+        body.green 
+        {
+            background: linear-gradient(to right, #AFD5AA, #7fd573) !important; 
+        }
+
+
+        .container 
+        {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #FFF7F8;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        h1, h2 
+        {
+            text-align: center;
+            color: #8C5E58;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 
+        {
+            font-size: 2.5em;
+        }
+
+        
+        label 
+        {
+            display: block;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #8C5E58;
+            margin-bottom: 8px;
+        }
+
+        
+        input, textarea, select 
+        {
+            width: 97%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #FFA69E;
+            border-radius: 8px;
+            font-family: sans-serif;
+            font-size: 1.1em;
+            background: #FFF7F8;
+            color: #333;
+        }
+
+        
+        input:focus, textarea:focus, select:focus 
+        {
+            border-color: #A9F0D1;
+            outline: none;
+            box-shadow: 0 0 8px rgba(169, 240, 209, 0.5);
+        }
+
+       
+        button 
+        {
+            background: #FF7E6B;
+            color: #FFF;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover 
+        {
+            background: #FFA69E;
+            transform: scale(1.05);
+        }
+
+        
+        .form-container 
+        {
+            padding: 20px;
+            background: #FFF7F8;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        select 
+        {
+            appearance: none;
+            background-size: 16px;
+        }
+
+        
+        .cv-output 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-top: 30px;
+            padding: 20px;
+            background: #FFF7F8;
+            border: 1px solid #FFA69E;
+            border-radius: 8px;
+        }
+
+
+        
+        .cv-output div 
+        {
+            flex: 1;
+            color: #8C5E58;
+        }
+
+       
+        #notification 
+        {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #A9F0D1;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            display: none;
+            z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Generator</h1>
+        <form id="cvForm">
+            <input type="text" id="fullName" placeholder="Full Name" required><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="tel" id="phone" placeholder="Phone" required><br>
+            <textarea id="address" placeholder="Address" required></textarea><br>
+            <textarea id="education" placeholder="Education" required></textarea><br>
+            <textarea id="skills" placeholder="Skills" required></textarea><br>
+            <textarea id="experience" placeholder="Experience" required></textarea><br>
+            <textarea id="projects" placeholder="Projects" required></textarea><br>
+            <textarea id="hobbies" placeholder="Hobbies" required></textarea><br>
+            <textarea id="references" placeholder="References" required></textarea><br>
+
+
+            <label for="layout">Select Layout: </label>
+            <select id="layout">
+                <option value="modern">Modern</option>
+                <option value="minimalist">Minimalist</option>
+                <option value="creative">Creative</option>
+            </select><br>
+
+            <label for="theme">Select Theme: </label>
+            <select id="theme">
+                <option value="default">Default</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select><br>
+
+
+
+            <button type="button" id="generateBtn">Generate Resume</button>
+        </form>
+
+        <div id="cvOutput"></div>
+        <button id="downloadBtn" style="display:none;">Download Resume</button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
