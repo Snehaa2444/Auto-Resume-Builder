@@ -22,7 +22,7 @@ Auto Resume Builder is a sleek and intuitive web application crafted using HTML,
 
 ## Folder Structure
 
-📂 Auto Resume Builder
+📦 Auto Resume Builder
 ├── index.html
 ├── 📂 template
 │    ├── modern.css
