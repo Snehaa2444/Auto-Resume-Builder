@@ -19,5 +19,5 @@ Auto Resume Builder is a sleek and intuitive web application crafted using HTML,
 **Frontend:** HTML5, CSS3, JavaScript
 
 **Libraries:** html2pdf, jspdf
-
+├──
 This project is perfect for anyone looking for an easy, fast, and customisable way to build resumes without technical expertise.
