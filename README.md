@@ -21,7 +21,7 @@ Auto Resume Builder is a sleek and intuitive web application crafted using HTML,
 **Libraries:** html2pdf, jspdf
 
 ## Folder Structure
-
+```
 📦 Auto Resume Builder
 ├── index.html
 ├── 📂 template
@@ -30,6 +30,6 @@ Auto Resume Builder is a sleek and intuitive web application crafted using HTML,
 │    └── creative.css
 └── 📂 js
      └── main.js
-        
+```      
 
 This project is perfect for anyone looking for an easy, fast, and customisable way to build resumes without technical expertise.
